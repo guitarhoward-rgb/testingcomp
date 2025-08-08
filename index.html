@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compliment Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #83a4d4, #b6fbff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    #compliment {
+      font-size: 1.5rem;
+      margin: 20px;
+      color: #222;
+      max-width: 600px;
+    }
+
+    button {
+      background: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Need a Compliment?</h1>
+  <div id="compliment">Click the button below to get one!</div>
+  <button onclick="giveCompliment()">Give Me One</button>
+
+  <script>
+    const compliments = [
+      "You're doing better than you think.",
+      "Your smile could light up a whole room.",
+      "You're a genius in disguise.",
+      "Someone out there is inspired by you.",
+      "You're more capable than you realize.",
+      "You make the world better just by being in it.",
+      "You're crushing it right now — seriously.",
+      "You're a walking beam of sunshine.",
+      "You’re cooler than the flip side of a pillow.",
+      "You’re the reason someone believes in good people."
+    ];
+
+    function giveCompliment() {
+      const index = Math.floor(Math.random() * compliments.length);
+      document.getElementById("compliment").textContent = compliments[index];
+    }
+  </script>
+</body>
+</html>
